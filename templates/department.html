@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Departments</title>
+    </head>
+    <body>
+        <header class="header" style="background-color:lightblue;padding:10px;">
+            <nav class="nav">
+                 <h1 style="font-family:arial;color:black;align:center;">{{page_title}}</h1>
+                 <p style="font-family:arial;color:black;align:center;">{{description}}</p>
+                <ul class="horizontal-list" style="list-style-type:none;display:flex;gap:10px;">
+                    <li><a href="{%url 'home' %}">Home</a></li>
+                    <li><a href="{%url 'contact' %}">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        {% for i in departments%}
+
+        <ul>
+            <li>
+                <strong>{{i.name}}</strong> : {{i.head_of_dept}} : {{i.description}}
+            
+            </li>
+
+        </ul>
+
+        
+        {%endfor%}
+    </body>
+</html>
