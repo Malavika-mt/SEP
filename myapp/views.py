@@ -92,3 +92,5 @@ def profile(request, id):
                 return HttpResponseForbidden("You are not authorized to view this profile")
         return HttpResponse(f"Welcome to the profile page ")
         
+def student_list(request):
+        return HttpResponse("Lists of students")
