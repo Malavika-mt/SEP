@@ -29,5 +29,5 @@ class Student_Register(models.Model):
     department=models.CharField(max_length=100)
 
     def __str__(self):
-        return self.name
+        return f"{self.first_name} {self.last_name}"
      
